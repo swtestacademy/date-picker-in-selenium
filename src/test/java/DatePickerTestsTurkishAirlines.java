@@ -21,9 +21,6 @@ public class DatePickerTestsTurkishAirlines extends BaseTest {
         WebElement dateWidgetFrom = wait.until(
             ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("ui-datepicker-calendar"))).get(0);
 
-        //This are the rows of the from date picker table
-        List<WebElement> rows = dateWidgetFrom.findElements(By.tagName("tr"));
-
         //This are the columns of the from date picker table
         List<WebElement> columns = dateWidgetFrom.findElements(By.tagName("td"));
 
