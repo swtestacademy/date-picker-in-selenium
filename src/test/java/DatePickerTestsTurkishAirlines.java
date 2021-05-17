@@ -12,11 +12,7 @@ public class DatePickerTestsTurkishAirlines extends BaseTest {
     public void turkishAirlinesDatePicker() {
         //Because of the Webdriver Bot Detection this test cannot be run properly.
         //But you can follow the approach in debug mode I run the test successfully and it worked.
-        driver.navigate().to("http://www.turkishairlines.com");
-
-        //Get Today
-        String today = DateUtil.getCurrentDay();
-        System.out.println("Today's number: " + today + "\n");
+        driver.navigate().to("https://www.turkishairlines.com");
 
         //Click and open the Date Picker
         driver.findElement(By.id("dateSelector")).click();
@@ -31,20 +27,7 @@ public class DatePickerTestsTurkishAirlines extends BaseTest {
         //This are the columns of the from date picker table
         List<WebElement> columns = dateWidgetFrom.findElements(By.tagName("td"));
 
-        //DatePicker is a table. Thus we can navigate to each cell
-        //and if a cell matches with the current date then we will click it.
-        for (WebElement cell : columns) {
-            /*
-            //If you want to click 18th Date
-            if (cell.getText().equals("18")) {
-            */
-            //Select Today's Date
-            String cellText = cell.getText();
-            if (cellText.contains(today)) {
-                cell.click();
-                break;
-            }
-        }
+        DateUtil.clickGivenDay(columns, DateUtil.getCurrentDay());
 
         //Wait a bit to see that we have selected the data properly.
         Thread.sleep(5000);

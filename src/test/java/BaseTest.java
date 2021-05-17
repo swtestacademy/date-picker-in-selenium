@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeEach
     public void classLevelSetup() {
-        driver = new ChromeDriver(ChromeOps.getOptions());
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
