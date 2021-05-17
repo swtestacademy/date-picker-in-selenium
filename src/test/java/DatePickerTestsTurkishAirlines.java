@@ -9,7 +9,7 @@ public class DatePickerTestsTurkishAirlines extends BaseTest {
 
     @Test
     @SneakyThrows
-    public void turkishAirlinesDatePicker() {
+    public void turkishAirlinesDatePickerTest() {
         //Because of the Webdriver Bot Detection this test cannot be run properly.
         //But you can follow the approach in debug mode I run the test successfully and it worked.
         driver.navigate().to("https://www.turkishairlines.com");

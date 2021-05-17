@@ -9,7 +9,7 @@ public class DatePickerTestsFlyDubai extends BaseTest {
 
     @Test
     @SneakyThrows
-    public void flyDubaiDatePicker() {
+    public void flyDubaiDatePickerTest() {
         //Go to website
         driver.get("https://www.flydubai.com/en/");
 
